@@ -28,9 +28,72 @@ public class Chore {
     @NotBlank(message = "status.missing")
     private String status;
 
-//TODO Create getters and setters!
+    public Chore(Long id, Long advertiserId, Long workerId, String description, int getEstimatedTime, int estimatedWage, String status) {
+        this.id = id;
+        this.advertiserId = advertiserId;
+        this.workerId = workerId;
+        this.description = description;
+        this.getEstimatedTime = getEstimatedTime;
+        this.estimatedWage = estimatedWage;
+        this.status = status;
+    }
 
+    public Chore() {
+    }
 
+    public Long getId() {
+        return id;
+    }
 
+    public void setId(Long id) {
+        this.id = id;
+    }
 
+    public Long getAdvertiserId() {
+        return advertiserId;
+    }
+
+    public void setAdvertiserId(Long advertiserId) {
+        this.advertiserId = advertiserId;
+    }
+
+    public Long getWorkerId() {
+        return workerId;
+    }
+
+    public void setWorkerId(Long workerId) {
+        this.workerId = workerId;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public int getGetEstimatedTime() {
+        return getEstimatedTime;
+    }
+
+    public void setGetEstimatedTime(int getEstimatedTime) {
+        this.getEstimatedTime = getEstimatedTime;
+    }
+
+    public int getEstimatedWage() {
+        return estimatedWage;
+    }
+
+    public void setEstimatedWage(int estimatedWage) {
+        this.estimatedWage = estimatedWage;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
 }
