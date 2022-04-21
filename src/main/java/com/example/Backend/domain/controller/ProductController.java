@@ -1,4 +1,4 @@
-package com.example.Product;
+package com.example.Backend.domain.controller;
 
 import com.example.Backend.domain.model.Product;
 import org.springframework.security.oauth2.jwt.Jwt;
