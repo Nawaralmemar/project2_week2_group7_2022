@@ -14,7 +14,7 @@ public class Message {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long ID;
+    private long messageid;
     @NotBlank
     private long userID1;
     @NotBlank

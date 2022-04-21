@@ -1,6 +1,5 @@
 package com.example.Backend.domain.model;
 import javax.persistence.*;
-import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 
 @Entity
@@ -8,7 +7,7 @@ import javax.validation.constraints.NotBlank;
 public class Location {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private long locationid;
 
     @NotBlank(message = "streetName.missing")
     private String streetName;
@@ -27,8 +26,8 @@ public class Location {
 
     private long userID;
 
-    public Location(long id, String streetName, String streetNumber, String bus, String postalCode, String city, long userID) {
-        this.id = id;
+    public Location(long locationid, String streetName, String streetNumber, String bus, String postalCode, String city, long userID) {
+        this.locationid = locationid;
         this.streetName = streetName;
         this.streetNumber = streetNumber;
         this.bus = bus;
@@ -40,8 +39,8 @@ public class Location {
     public Location() {
     }
 
-    public void setId(long id) {
-        this.id = id;
+    public void setLocationid(long id) {
+        this.locationid = id;
     }
 
     public void setStreetName(String streetName) {
@@ -68,8 +67,8 @@ public class Location {
         this.userID = userID;
     }
 
-    public long getId() {
-        return id;
+    public long getLocationid() {
+        return locationid;
     }
 
     public String getStreetName() {

@@ -26,7 +26,7 @@ public class Person {
     @NotBlank(message = "phoneNumber.missing")
     private String phoneNumber;
 
-    private int experience;
+    private int xp;
 
 
     public Person(long id , String password, String email, String firstName, String lastName, String phoneNumber) {
@@ -36,7 +36,7 @@ public class Person {
         this.firstName = firstName;
         this.lastName = lastName;
         this.phoneNumber = phoneNumber;
-        this.experience = 0;
+        this.xp = 0;
     }
 
     public Person() {
@@ -51,8 +51,8 @@ public class Person {
         return password;
     }
 
-    public int getExperience() {
-        return experience;
+    public int getXp() {
+        return xp;
     }
 
     public String getEmail() {

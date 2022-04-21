@@ -9,7 +9,7 @@ public class Chore {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long choreid;
 
     @NotBlank(message = "advertiser.missing")
     private Long advertiserId;
@@ -28,8 +28,8 @@ public class Chore {
     @NotBlank(message = "status.missing")
     private String status;
 
-    public Chore(Long id, Long advertiserId, Long workerId, String description, int getEstimatedTime, int estimatedWage, String status) {
-        this.id = id;
+    public Chore(Long choreid, Long advertiserId, Long workerId, String description, int getEstimatedTime, int estimatedWage, String status) {
+        this.choreid = choreid;
         this.advertiserId = advertiserId;
         this.workerId = workerId;
         this.description = description;
@@ -41,12 +41,12 @@ public class Chore {
     public Chore() {
     }
 
-    public Long getId() {
-        return id;
+    public Long getChoreid() {
+        return choreid;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public void setChoreid(Long id) {
+        this.choreid = id;
     }
 
     public Long getAdvertiserId() {
