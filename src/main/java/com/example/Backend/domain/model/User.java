@@ -27,10 +27,9 @@ public class User {
     private String phoneNumber;
 
     private int experience;
-    private int rating;
 
 
-    public User(long id ,String password, String email, String firstName, String lastName, String phoneNumber) {
+    public User(long id , String password, String email, String firstName, String lastName, String phoneNumber) {
         this.id = id;
         this.password = password;
         this.email = email;
