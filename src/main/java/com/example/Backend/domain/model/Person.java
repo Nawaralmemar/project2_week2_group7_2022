@@ -4,8 +4,8 @@ import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 
 @Entity
-@Table(name = "user")
-public class User {
+@Table(name = "person")
+public class Person {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
@@ -27,10 +27,9 @@ public class User {
     private String phoneNumber;
 
     private int experience;
-    private int rating;
 
 
-    public User(long id ,String password, String email, String firstName, String lastName, String phoneNumber) {
+    public Person(long id , String password, String email, String firstName, String lastName, String phoneNumber) {
         this.id = id;
         this.password = password;
         this.email = email;
@@ -40,7 +39,7 @@ public class User {
         this.experience = 0;
     }
 
-    public User() {
+    public Person() {
 
     }
 

@@ -1,7 +1,7 @@
 package com.example.Backend.domain.controller;
 
 
-import com.example.Backend.domain.model.User;
+import com.example.Backend.domain.model.Person;
 import com.example.Backend.Service.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -16,7 +16,7 @@ public class UserRestController {
     private UserService userService;
 
     @GetMapping("/all")
-    public Iterable<User> getAllUsers(){
+    public Iterable<Person> getAllUsers(){
         return userService.getAllUsers();
     }
 
@@ -26,8 +26,8 @@ public class UserRestController {
     }
 
     @PostMapping("/add")
-    public Iterable<User> add(@Valid @RequestBody User user) {
-        userService.add(user);
+    public Iterable<Person> add(@Valid @RequestBody Person person) {
+        userService.add(person);
         return userService.getAllUsers();
     }
 }

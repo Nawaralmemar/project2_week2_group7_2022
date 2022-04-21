@@ -1,10 +1,8 @@
 package com.example.Backend.Service;
 
-import com.example.Backend.domain.model.User;
+import com.example.Backend.domain.model.Person;
 import com.example.Backend.domain.model.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
-import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
@@ -14,15 +12,15 @@ public class UserService {
     @Autowired
     private UserRepository userRepository;
 
-    public User add(User user) {
-        return userRepository.save(user);
+    public Person add(Person person) {
+        return userRepository.save(person);
     }
 
-    public Iterable<User> getAllUsers() {
+    public Iterable<Person> getAllUsers() {
         return userRepository.findAll();
     }
 
-    public Optional<User> getUserById(long id) {
+    public Optional<Person> getUserById(long id) {
         return userRepository.findById(id);
     }
 
@@ -32,8 +30,8 @@ public class UserService {
 
     public void deleteWithId(long id) {userRepository.findById(id);}
 
-    public User updateUser(User user) {
-        return userRepository.save(user);
+    public Person updateUser(Person person) {
+        return userRepository.save(person);
     }
 
 }
