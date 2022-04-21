@@ -14,9 +14,10 @@ public class Message {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private long ID;
+    @NotBlank
     private long userID1;
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @NotBlank
     private long userID2;
 
     @NotBlank(message = "timestamp is required")
